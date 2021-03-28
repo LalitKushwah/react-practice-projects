@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-export const InvalidRoute = (props) => {
+const InvalidRoute = (props) => {
     return (
         <div>
             {props.message}

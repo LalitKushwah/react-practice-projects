@@ -7,30 +7,34 @@ import { FaBars } from 'react-icons/fa'
 
 const Projects = ({ projectTypes }) => {
     return (
-        <nav>
-            <div className="nav-center">
-                <div className="nav-header">
-                    <Link to="/"><img src={logo} alt="logo" className='logo' /></Link>
-                    <button className="nav-toggle">
-                        <FaBars />
-                    </button>
-                </div>
-                <div className="links-container show-container">
-                    <ul className="links">
-                        <li>
-                            <Link to="/projects/basic">Basic</Link>
-                        </li>
-                        <li>
-                            <Link to="/projects/advanced">Advanced</Link>
-                        </li>
+        <>
+            <nav>
+                <div className="nav-center">
+                    <div className="nav-header">
+                        <Link to="/"><img src={logo} alt="logo" className='logo' /></Link>
+                        <button className="nav-toggle">
+                            <FaBars />
+                        </button>
+                    </div>
+                    <div className="links-container show-container">
+                        <ul className="links">
+                            <li>
+                                <Link to="/projects/basic">Basic</Link>
+                            </li>
+                            <li>
+                                <Link to="/projects/advanced">Advanced</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul className="social-icons">
+
                     </ul>
                 </div>
-                <ul className="social-icons">
-
-                </ul>
+            </nav>
+            <div style={{ textAlign: 'center' }}>
+                {registerChildRoutes()}
             </div>
-            { registerChildRoutes()}
-        </nav>
+        </>
 
     );
 }

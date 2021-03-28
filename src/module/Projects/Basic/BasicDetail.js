@@ -6,6 +6,7 @@ import Reviews from './Review/Reviews';
 import Accordion from './Accordion/Accordion';
 import Menu from './Menu/Menu';
 import Tabs from './Tab/Tabs';
+import InvalidRoute from '../../../components/error/invalid.route';
 
 const BasicDetail = () => {
     const { id } = useParams();
@@ -41,7 +42,7 @@ const getMarkup = (id) => {
             markup = <Tabs />
             break;
         default:
-            <p>No project exists</p>
+            markup = <InvalidRoute message="Route Not Found" />
     }
     return markup;
 }
