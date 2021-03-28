@@ -11,6 +11,26 @@ const project = [
                 id: 1,
                 name: 'Tours',
                 description: 'lorem ipsum'
+            },
+            {
+                id: 2,
+                name: 'Review',
+                description: 'lorem ipsum'
+            },
+            {
+                id: 3,
+                name: 'Accordion',
+                description: 'lorem ipsum'
+            },
+            {
+                id: 4,
+                name: 'Menu',
+                description: 'lorem ipsum'
+            },
+            {
+                id: 5,
+                name: 'Tab',
+                description: 'lorem ipsum'
             }
         ]
     },
