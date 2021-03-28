@@ -9,16 +9,14 @@ const Basic = () => {
             <h1>Basic Project</h1>
             <List component="nav" aria-label="secondary mailbox folders">
                 {
-                    projects.map(project => {
-                        if (project.type === 'Basic') {
-                            return project.metaData.map(item => {
-                                return (
-                                    <ListItem button>
-                                        <Link to={`/projects/basic/${item.id}`}><ListItemText primary={item.name} /></Link>
-                                    </ListItem>
-                                )
-                            })
-                        }
+                    projects.filter(item => item.type === 'Basic').map(project => {
+                        return project.metaData.map(item => {
+                            return (
+                                <ListItem button>
+                                    <Link to={`/projects/basic/${item.id}`}><ListItemText primary={item.name} /></Link>
+                                </ListItem>
+                            )
+                        })
                     })
                 }
 

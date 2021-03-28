@@ -1,18 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Tour from './Tour';
 import Loader from '../../../../components/widgets/Loader'
-import { makeStyles } from '@material-ui/core';
-
-
-const useStyle = makeStyles(() => ({
-    position: {
-        width: '500px',
-    }
-}))
 
 const Tours = () => {
-
-    const classes = useStyle();
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);

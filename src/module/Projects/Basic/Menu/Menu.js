@@ -5,7 +5,7 @@ import items from '../../../../assets/data/Menu';
 
 const Menu = () => {
     const [menuItems, setMenuItems] = useState(items);
-    const [categories, setCategories] = useState([]);
+    // const [categories, setCategories] = useState([]);
 
     const allCategories = ['all', ...new Set(items.map(item => item.category))];
 

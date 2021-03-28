@@ -5,7 +5,7 @@ import Tours from './Tours/Tours';
 import Reviews from './Review/Reviews';
 import Accordion from './Accordion/Accordion';
 import Menu from './Menu/Menu';
-import Menu from './Tab/Tabs';
+import Tabs from './Tab/Tabs';
 
 const BasicDetail = () => {
     const { id } = useParams();

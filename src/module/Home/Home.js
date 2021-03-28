@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import projectsData from '../../assets/data/data';
 import styled from 'styled-components';
 import { Container } from '@material-ui/core';
 
@@ -13,14 +12,6 @@ const Home = () => {
             </HomeContainer>
         </Container>
     )
-}
-
-const renderProjects = (projects) => {
-    return (
-        projects.map(project => {
-            return <Link to={`/projects/basic/${project.id}`}>{project.name}</Link>
-        }
-        ))
 }
 
 const HomeContainer = styled.div`

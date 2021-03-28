@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaGithubSquare } from 'react-icons/fa'
 import Review from './Review';
 
 const Reviews = () => {
@@ -7,9 +6,9 @@ const Reviews = () => {
         <section>
             <div className="title">
                 <h2>Our Reviews</h2>
-                <div className="underlie"></div>
+                <div className="underline"></div>
             </div>
-            <Review/>
+            <Review />
         </section>
     )
 }

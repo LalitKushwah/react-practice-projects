@@ -1,28 +1,36 @@
 import React from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-import { Container } from '@material-ui/core';
-import styled from 'styled-components';
 import BasicProject from './Basic/Basic';
 import BasicDetailProject from './Basic/BasicDetail';
-
-
-
+import logo from '../../logo.svg';
+import { FaBars } from 'react-icons/fa'
 
 const Projects = ({ projectTypes }) => {
     return (
-        <Container>
-            <StyledDiv>
-                <ul>
-                    <li>
-                        <Link to="/projects/basic">Basic</Link>
-                    </li>
-                    <li>
-                        <Link to="/projects/advanced">Advanced</Link>
-                    </li>
+        <nav>
+            <div className="nav-center">
+                <div className="nav-header">
+                    <Link to="/"><img src={logo} alt="logo" className='logo' /></Link>
+                    <button className="nav-toggle">
+                        <FaBars />
+                    </button>
+                </div>
+                <div className="links-container show-container">
+                    <ul className="links">
+                        <li>
+                            <Link to="/projects/basic">Basic</Link>
+                        </li>
+                        <li>
+                            <Link to="/projects/advanced">Advanced</Link>
+                        </li>
+                    </ul>
+                </div>
+                <ul className="social-icons">
+
                 </ul>
-            </StyledDiv>
-            {registerChildRoutes()}
-        </Container>
+            </div>
+            { registerChildRoutes()}
+        </nav>
 
     );
 }
@@ -36,9 +44,5 @@ const registerChildRoutes = () => {
         </Switch>
     )
 }
-
-const StyledDiv = styled.div`
-    text-align: center;   
-`
 
 export default Projects;
